@@ -2,7 +2,6 @@
 
 import { Activity } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
-<ThemeToggle />
 
 export default function Navbar() {
 
@@ -22,30 +21,36 @@ export default function Navbar() {
 
       </div>
 
-      <div className="hidden md:flex gap-8 text-slate-300">
+      <div className="flex items-center gap-6">
 
-        <a
-          href="#home"
-          className="hover:text-cyan-400 transition"
-        >
-          Home
-        </a>
+  <div className="hidden md:flex gap-8 text-slate-300">
 
-        <a
-          href="#dashboard"
-          className="hover:text-cyan-400 transition"
-        >
-          Dashboard
-        </a>
+    <a
+      href="#home"
+      className="hover:text-cyan-400 transition"
+    >
+      Home
+    </a>
 
-        <a
-          href="#about"
-          className="hover:text-cyan-400 transition"
-        >
-          About
-        </a>
+    <a
+      href="#dashboard"
+      className="hover:text-cyan-400 transition"
+    >
+      Dashboard
+    </a>
 
-      </div>
+    <a
+      href="#about"
+      className="hover:text-cyan-400 transition"
+    >
+      About
+    </a>
+
+  </div>
+
+  <ThemeToggle />
+
+</div>
 
     </nav>
   );

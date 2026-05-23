@@ -108,7 +108,7 @@ export default function Home() {
 
     <main
       id="home"
-      className="min-h-screen bg-gradient-to-br from-black via-slate-900 to-blue-950 text-white px-4 py-6 md:px-6"
+      className="min-h-screen bg-gradient-to-br from-white to-slate-200 dark:from-black dark:via-slate-900 dark:to-blue-950 text-black dark:text-white transition-colors duration-500 px-4 py-6 md:px-6"
     >
 
       <div className="max-w-6xl mx-auto">
@@ -124,11 +124,11 @@ export default function Home() {
           className="text-center py-12 md:py-16"
         >
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-transparent bg-clip-text leading-tight">
             PneumoScan AI
           </h1>
 
-          <p className="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-8">
+          <p className="text-base md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto leading-8">
             AI-powered pneumonia risk screening platform using machine learning and clinical indicators.
           </p>
 
@@ -140,7 +140,7 @@ export default function Home() {
 
           {/* INPUT CARD */}
 
-          <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl">
+          <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg border border-slate-300 dark:border-slate-700 rounded-3xl p-6 md:p-8 shadow-2xl">
 
             <h2 className="text-3xl font-bold mb-8">
               Patient Data
@@ -150,7 +150,7 @@ export default function Home() {
 
             <div className="mb-6">
 
-              <label className="block mb-2 text-slate-300">
+              <label className="block mb-2 text-slate-700 dark:text-slate-300">
                 Fever
               </label>
 
@@ -158,7 +158,7 @@ export default function Home() {
                 name="fever"
                 value={form.fever}
                 onChange={handleChange}
-                className="w-full p-4 rounded-xl bg-slate-900 border border-slate-700"
+                className="w-full p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
               >
                 <option value={1}>Yes</option>
                 <option value={0}>No</option>
@@ -170,7 +170,7 @@ export default function Home() {
 
             <div className="mb-6">
 
-              <label className="block mb-2 text-slate-300">
+              <label className="block mb-2 text-slate-700 dark:text-slate-300">
                 Tachycardia
               </label>
 
@@ -178,7 +178,7 @@ export default function Home() {
                 name="tachycardia"
                 value={form.tachycardia}
                 onChange={handleChange}
-                className="w-full p-4 rounded-xl bg-slate-900 border border-slate-700"
+                className="w-full p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
               >
                 <option value={1}>Yes</option>
                 <option value={0}>No</option>
@@ -190,7 +190,7 @@ export default function Home() {
 
             <div className="mb-6">
 
-              <label className="block mb-2 text-slate-300">
+              <label className="block mb-2 text-slate-700 dark:text-slate-300">
                 Crackles
               </label>
 
@@ -198,7 +198,7 @@ export default function Home() {
                 name="crackles"
                 value={form.crackles}
                 onChange={handleChange}
-                className="w-full p-4 rounded-xl bg-slate-900 border border-slate-700"
+                className="w-full p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
               >
                 <option value={1}>Yes</option>
                 <option value={0}>No</option>
@@ -210,7 +210,7 @@ export default function Home() {
 
             <div className="mb-6">
 
-              <label className="block mb-2 text-slate-300">
+              <label className="block mb-2 text-slate-700 dark:text-slate-300">
                 Oxygen Saturation: {form.oxygen_saturation}%
               </label>
 
@@ -230,7 +230,7 @@ export default function Home() {
 
             <div className="mb-6">
 
-              <label className="block mb-2 text-slate-300">
+              <label className="block mb-2 text-slate-700 dark:text-slate-300">
                 WBC Count
               </label>
 
@@ -239,7 +239,7 @@ export default function Home() {
                 name="wbc_count"
                 value={form.wbc_count}
                 onChange={handleChange}
-                className="w-full p-4 rounded-xl bg-slate-900 border border-slate-700"
+                className="w-full p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
               />
 
             </div>
@@ -248,7 +248,7 @@ export default function Home() {
 
             <div className="mb-8">
 
-              <label className="block mb-2 text-slate-300">
+              <label className="block mb-2 text-slate-700 dark:text-slate-300">
                 Chest X-Ray Result
               </label>
 
@@ -256,7 +256,7 @@ export default function Home() {
                 name="chest_xray_result"
                 value={form.chest_xray_result}
                 onChange={handleChange}
-                className="w-full p-4 rounded-xl bg-slate-900 border border-slate-700"
+                className="w-full p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
               >
                 <option value="normal">Normal</option>
                 <option value="consolidation">Consolidation</option>
@@ -271,7 +271,7 @@ export default function Home() {
 
             <button
               onClick={predict}
-              className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition-all duration-300 py-3 md:py-4 rounded-2xl text-lg md:text-xl font-bold shadow-lg"
+              className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition-all duration-300 py-3 md:py-4 rounded-2xl text-lg md:text-xl font-bold shadow-lg text-white"
             >
               {loading ? "Analyzing..." : "Run AI Prediction"}
             </button>
@@ -280,7 +280,7 @@ export default function Home() {
 
           {/* RESULT CARD */}
 
-          <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col justify-center">
+          <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg border border-slate-300 dark:border-slate-700 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col justify-center">
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Prediction Result
@@ -288,7 +288,7 @@ export default function Home() {
 
             {!result && !loading && (
 
-              <div className="text-slate-400 text-base md:text-lg">
+              <div className="text-slate-600 dark:text-slate-400 text-base md:text-lg">
                 Submit patient data to generate AI prediction.
               </div>
 
@@ -298,9 +298,9 @@ export default function Home() {
 
               <div className="flex flex-col items-center py-10">
 
-                <div className="w-20 h-20 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mb-6"></div>
+                <div className="w-20 h-20 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mb-6"></div>
 
-                <p className="text-lg md:text-xl text-slate-300 text-center">
+                <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 text-center">
                   AI analyzing patient data...
                 </p>
 
@@ -314,11 +314,11 @@ export default function Home() {
 
                 <div className="mb-6">
 
-                  <p className="text-slate-400 mb-2">
+                  <p className="text-slate-600 dark:text-slate-400 mb-2">
                     Diagnosis
                   </p>
 
-                  <h3 className="text-3xl md:text-5xl font-bold text-cyan-400 break-words">
+                  <h3 className="text-3xl md:text-5xl font-bold text-cyan-600 dark:text-cyan-400 break-words">
                     {result.prediction}
                   </h3>
 
@@ -326,7 +326,7 @@ export default function Home() {
 
                 <div className="mb-6">
 
-                  <p className="text-slate-400 mb-2">
+                  <p className="text-slate-600 dark:text-slate-400 mb-2">
                     Probability
                   </p>
 
@@ -338,9 +338,9 @@ export default function Home() {
 
                 </div>
 
-                <div className="bg-slate-900/70 p-6 rounded-2xl border border-slate-700">
+                <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-700">
 
-                  <p className="text-slate-300 leading-8 text-sm md:text-base">
+                  <p className="text-slate-700 dark:text-slate-300 leading-8 text-sm md:text-base">
                     AI-generated prediction based on clinical indicators and trained ML model.
                   </p>
 
@@ -372,9 +372,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-white/10">
+            <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-slate-300 dark:border-slate-700">
 
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">
+              <h3 className="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">
                 Accuracy
               </h3>
 
@@ -382,15 +382,15 @@ export default function Home() {
                 94%
               </p>
 
-              <p className="text-slate-400 mt-4 leading-8">
+              <p className="text-slate-600 dark:text-slate-400 mt-4 leading-8">
                 Model validation accuracy achieved during training.
               </p>
 
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-white/10">
+            <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-slate-300 dark:border-slate-700">
 
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">
+              <h3 className="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">
                 Predictions
               </h3>
 
@@ -398,15 +398,15 @@ export default function Home() {
                 12K+
               </p>
 
-              <p className="text-slate-400 mt-4 leading-8">
+              <p className="text-slate-600 dark:text-slate-400 mt-4 leading-8">
                 Simulated AI screenings processed by the system.
               </p>
 
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-white/10">
+            <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-slate-300 dark:border-slate-700">
 
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">
+              <h3 className="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">
                 ML Model
               </h3>
 
@@ -414,7 +414,7 @@ export default function Home() {
                 Gradient Boosting
               </p>
 
-              <p className="text-slate-400 mt-4 leading-8">
+              <p className="text-slate-600 dark:text-slate-400 mt-4 leading-8">
                 Optimized ensemble learning classifier for prediction.
               </p>
 
@@ -435,9 +435,9 @@ export default function Home() {
             About The Project
           </h2>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-10 border border-white/10 max-w-4xl mx-auto">
+          <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-10 border border-slate-300 dark:border-slate-700 max-w-4xl mx-auto">
 
-            <p className="text-base md:text-xl text-slate-300 leading-9">
+            <p className="text-base md:text-xl text-slate-700 dark:text-slate-300 leading-9">
 
               PneumoScan AI is a machine learning-powered healthcare screening platform designed to predict pneumonia risk using clinical indicators and AI-driven analysis.
 
@@ -449,11 +449,11 @@ export default function Home() {
 
               <div>
 
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">
+                <h3 className="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">
                   Tech Stack
                 </h3>
 
-                <ul className="space-y-2 text-slate-300 leading-8">
+                <ul className="space-y-2 text-slate-700 dark:text-slate-300 leading-8">
 
                   <li>• Next.js</li>
                   <li>• FastAPI</li>
@@ -467,11 +467,11 @@ export default function Home() {
 
               <div>
 
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">
+                <h3 className="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">
                   Features
                 </h3>
 
-                <ul className="space-y-2 text-slate-300 leading-8">
+                <ul className="space-y-2 text-slate-700 dark:text-slate-300 leading-8">
 
                   <li>• Real-time AI prediction</li>
                   <li>• Interactive medical UI</li>
@@ -503,18 +503,18 @@ export default function Home() {
 
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6"
+                className="bg-black/5 dark:bg-white/10 backdrop-blur-lg border border-slate-300 dark:border-slate-700 rounded-2xl p-6"
               >
 
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
                   <div>
 
-                    <h3 className="text-xl md:text-2xl font-bold text-cyan-400 break-words">
+                    <h3 className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400 break-words">
                       {item.prediction}
                     </h3>
 
-                    <p className="text-slate-400">
+                    <p className="text-slate-600 dark:text-slate-400">
                       {(item.probability * 100).toFixed(2)}%
                     </p>
 
